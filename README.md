@@ -19,4 +19,8 @@ A classic game where you try to guess a random number between 1 and 100.
 
 ## Getting Started
 
-To play any of the games, ensure you have the necessary compilers/runtimes installed as listed in the game descriptions.
+To play these games, you will need to compile the source code. Detailed instructions for various platforms can be found in [COMPILING.md](./COMPILING.md).
+
+### Prerequisites
+- A C compiler (GCC, Clang, or MSVC)
+- A terminal or command prompt
