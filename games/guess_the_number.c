@@ -14,13 +14,14 @@ void play_game() {
     // Generate a random number between 1 and 100
     target = (rand() % 100) + 1;
     
-    printf("\nI'm thinking of a number between 1 and 100.\n");
-    printf("Can you guess what it is?\n\n");
+    printf("\n=== NUMBER GUESSING GAME ===\n");
+    printf("I'm thinking of a number between 1 and 100.\n");
+    printf("Try to guess what it is!\n\n");
     
     while (1) {
-        printf("Enter your guess: ");
+        printf("[?] Your guess: ");
         if (scanf("%d", &guess) != 1) {
-            printf("Invalid input. Please enter a number.\n");
+            printf("[!] Invalid input. Please enter a number.\n");
             // Clear input buffer
             while (getchar() != '\n');
             continue;
@@ -29,11 +30,11 @@ void play_game() {
         attempts++;
         
         if (guess > target) {
-            printf("Too high! Try again.\n");
+            printf("[>] Too high! Try a lower number.\n");
         } else if (guess < target) {
-            printf("Too low! Try again.\n");
+            printf("[<] Too low! Try a higher number.\n");
         } else {
-            printf("\nCONGRATULATIONS! You guessed it in %d attempts!\n", attempts);
+            printf("\n[*] CONGRATULATIONS! You guessed it in %d attempts! [*]\n", attempts);
             break;
         }
     }
